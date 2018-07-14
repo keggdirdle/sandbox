@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+        <script>
+        function is_Palindrome(str1) { 
+            var rev = str1.split("").reverse().join(""); 
+            return str1 == rev; 
+        } 
+ 
+        function longest_palindrome(str1){ 
+            var max_length = 0, 
+            maxp = ''; 
+            for(var i=str1.length-1;i>=0; i--)  
+            { 
+                var subs = str1.substr(0, i); 
+                console.log("-----" + subs +  "-------");
+                for(var j=subs.length-1; j>=0; j--)  
+                { 
+                    var sub_subs_str = subs.substr(j, subs.length); 
+                    console.log("Trying " + sub_subs_str);
+                    if (is_Palindrome(sub_subs_str)) 
+                    { 
+                        if (sub_subs_str.length > max_length)  
+                        { 
+                            max_length = sub_subs_str.length; 
+                            maxp = sub_subs_str; 
+                        } 
+                    } 
+                } 
+            } 
+
+            return maxp; 
+        }
+ 
+            console.log(longest_palindrome("abracadabra"));   
+        </script>
+
+    </head>
+    <body>
+    </body>
+</html>

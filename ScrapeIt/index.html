@@ -1,0 +1,14 @@
+<html>
+<head>
+<script>
+var test = function() {
+    fetch('http://www.google.com',{
+        method: 'GET'
+    })
+    .then((response) => console.log(response))
+}
+</script>
+<body>
+<button onclick="test()">GO!</button>
+</body>
+</html>

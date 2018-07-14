@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            var sortThis = function (aryChars) {
+                    for(var i=0;i<aryChars.length-1;i++) {
+                        if(aryChars[i] > aryChars[i+1]) {
+                            var temp = aryChars[i];
+                            aryChars[i]= aryChars[i+1];
+                            aryChars[i+1] = temp;
+                            return sortThis(aryChars);  
+                        }
+                    }
+                console.log(aryChars);
+            }
+            sortThis(["b","c","a"]);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
